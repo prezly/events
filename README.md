@@ -15,6 +15,8 @@ There's this great [mitt](https://github.com/developit/mitt) package which imple
 
 ## Example
 
+Demo: https://codesandbox.io/s/prezlytyped-events-demo-2k7pd
+
 ```tsx
 import Events from '@prezly/typed-events';
 
