@@ -55,3 +55,7 @@ events.removeEventListener('add', add);
 events.removeEventListener('substract', substract);
 removeLogListener(); // this is another way to unsubscribe event listener
 ```
+
+---
+
+Brought to you by [Prezly](https://www.prezly.com/?utm_source=github&utm_campaign=@prezly/typed-events).
