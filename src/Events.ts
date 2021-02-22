@@ -1,6 +1,4 @@
-type Listener<Payload> = (payload: Payload) => void;
-
-type RemoveListener = () => void;
+import { Listener, RemoveListener } from './types';
 
 class Events<EventMap extends Record<string, unknown>> {
     private listeners: Partial<Record<keyof EventMap, Listener<any>[]>> = {};
