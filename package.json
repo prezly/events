@@ -1,5 +1,5 @@
 {
-    "name": "@prezly/typed-events",
+    "name": "@prezly/events",
     "version": "1.0.1",
     "description": "Event emitter with DOM-like EventTarget API & strong TypeScript typings",
     "license": "MIT",
@@ -7,12 +7,12 @@
     "types": "build/index.d.ts",
     "repository": {
         "type": "git",
-        "url": "git+https://github.com/prezly/typed-events.git"
+        "url": "git+https://github.com/prezly/events.git"
     },
     "bugs": {
-        "url": "https://github.com/prezly/typed-events/issues"
+        "url": "https://github.com/prezly/events/issues"
     },
-    "homepage": "https://github.com/prezly/typed-events#readme",
+    "homepage": "https://github.com/prezly/events#readme",
     "scripts": {
         "build": "tsc --project .",
         "check": "npm run prettier",

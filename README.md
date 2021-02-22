@@ -1,9 +1,9 @@
-# @prezly/typed-events
+# @prezly/events
 
-![Version](https://img.shields.io/npm/v/@prezly/typed-events)
-![License](https://img.shields.io/npm/l/@prezly/typed-events)
-![Build](https://github.com/prezly/typed-events/workflows/Build/badge.svg)
-![Prettier](https://github.com/prezly/typed-events/workflows/Prettier/badge.svg)
+![Version](https://img.shields.io/npm/v/@prezly/events)
+![License](https://img.shields.io/npm/l/@prezly/events)
+![Build](https://github.com/prezly/events/workflows/Build/badge.svg)
+![Prettier](https://github.com/prezly/events/workflows/Prettier/badge.svg)
 
 Event emitter with [DOM-like `EventTarget` API](https://developer.mozilla.org/en-US/docs/Web/API/EventTarget) & strong TypeScript typings.
 
@@ -11,14 +11,14 @@ Event emitter with [DOM-like `EventTarget` API](https://developer.mozilla.org/en
 
 ## Alternatives
 
-There's this great [mitt](https://github.com/developit/mitt) package which implements `EventEmitter` interface from node.js but it does not have strong typings. [There's a PR pending](https://github.com/developit/mitt/pull/114) with this feature, but there's been no activity for 7 months. Perhaps in the future we might not want to maintain this `@prezly/typed-events` package. But on the other hand, we should think twice before using a package where last PR got merged over half year ago.
+There's this great [mitt](https://github.com/developit/mitt) package which implements `EventEmitter` interface from node.js but it does not have strong typings. [There's a PR pending](https://github.com/developit/mitt/pull/114) with this feature, but there's been no activity for 7 months. Perhaps in the future we might not want to maintain this `@prezly/events` package. But on the other hand, we should think twice before using a package where last PR got merged over half year ago.
 
 ## Example
 
 Demo: https://codesandbox.io/s/prezlytyped-events-demo-2k7pd
 
 ```tsx
-import Events from '@prezly/typed-events';
+import Events from '@prezly/events';
 
 const ref = { current: 0 };
 
@@ -58,4 +58,4 @@ removeLogListener(); // this is another way to unsubscribe event listener
 
 ---
 
-Brought to you by [Prezly](https://www.prezly.com/?utm_source=github&utm_campaign=@prezly/typed-events).
+Brought to you by [Prezly](https://www.prezly.com/?utm_source=github&utm_campaign=@prezly/events).
