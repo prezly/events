@@ -3,8 +3,9 @@
     "version": "1.0.2",
     "description": "Event emitter with DOM-like EventTarget API & strong TypeScript typings",
     "license": "MIT",
-    "main": "build/index.js",
-    "types": "build/index.d.ts",
+    "main": "build/commonjs/index.js",
+    "module": "build/esm/index.js",
+    "types": "build/types/index.d.ts",
     "repository": {
         "type": "git",
         "url": "git+https://github.com/prezly/events.git"
@@ -14,7 +15,9 @@
     },
     "homepage": "https://github.com/prezly/events#readme",
     "scripts": {
-        "build": "tsc --project .",
+        "build": "npm run build:esm && npm run build:commonjs",
+        "build:commonjs": "tsc --project ./tsconfig.commonjs.json",
+        "build:esm": "tsc --project ./tsconfig.esm.json",
         "check": "npm run prettier",
         "clean": "rimraf build/ node_modules/",
         "prettier": "prettier --check './**/*.(js|ts|scss)'",
