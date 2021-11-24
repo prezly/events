@@ -18,7 +18,7 @@ There's this great [mitt](https://github.com/developit/mitt) package which imple
 Demo: https://codesandbox.io/s/prezlyevents-demo-2k7pd
 
 ```tsx
-import Events from '@prezly/events';
+import { Events } from '@prezly/events';
 
 const ref = { current: 0 };
 
