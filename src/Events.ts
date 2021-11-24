@@ -1,4 +1,4 @@
-import { Listener, RemoveListener } from './types';
+import type { Listener, RemoveListener } from './types';
 
 export class Events<EventMap extends Record<string, unknown>> {
     private listeners: Partial<Record<keyof EventMap, Listener<any>[]>> = {};
