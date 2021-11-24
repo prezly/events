@@ -1,6 +1,6 @@
 import { Listener, RemoveListener } from './types';
 
-class Events<EventMap extends Record<string, unknown>> {
+export class Events<EventMap extends Record<string, unknown>> {
     private listeners: Partial<Record<keyof EventMap, Listener<any>[]>> = {};
 
     public dispatchEvent<Event extends keyof EventMap>(
@@ -37,5 +37,3 @@ class Events<EventMap extends Record<string, unknown>> {
         return (this.listeners[event] || []) as Listener<EventMap[Event]>[];
     }
 }
-
-export default Events;
