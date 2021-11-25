@@ -3,7 +3,7 @@
     "version": "2.0.2",
     "description": "Event emitter with DOM-like EventTarget API & strong TypeScript typings",
     "license": "MIT",
-    "main": "build/commonjs/index.js",
+    "main": "build/commonjs/index.cjs",
     "module": "build/esm/index.mjs",
     "types": "build/types/index.d.ts",
     "repository": {
