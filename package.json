@@ -26,6 +26,10 @@
         "release:prepare": "npm run clean && npm install && npm run build && npm run check",
         "release:publish": "np --no-2fa"
     },
+    "devEngines": {
+        "node": ">=16.0.0",
+        "npm": ">=7.0.0"
+    },
     "devDependencies": {
         "np": "^7.3.0",
         "prettier": "^2.2.1",
