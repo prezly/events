@@ -15,13 +15,17 @@
     },
     "homepage": "https://github.com/prezly/events#readme",
     "scripts": {
-        "build": "npm run build:esm && npm run build:commonjs",
-        "build:commonjs": "tsc --project ./tsconfig.commonjs.json",
-        "build:esm": "tsc --project ./tsconfig.esm.json && renamer --force --find '.js' --replace '.mjs' 'build/esm/**/*.{js,js.map}'",
-        "check": "npm run prettier",
-        "clean": "rimraf build/ node_modules/",
+        "build": "npm run build:types && npm run build:esm && npm run build:commonjs",
+        "build:types": "tsc --project .",
+        "build:esm": "babel --config-file ./babel.esm.config.mjs src/ --extensions .ts --out-dir ./build/esm/ --out-file-extension .mjs",
+        "build:commonjs": "babel --config-file ./babel.commonjs.config.mjs src/ --extensions .ts --out-dir ./build/commonjs/ --out-file-extension .cjs",
+        "check": "npm run prettier && npm run build:types",
+        "type-check": "tsc --project . --noEmit --emitDeclarationOnly false",
         "prettier": "prettier --check './**/*.(js|ts|scss)'",
         "prettier:fix": "npm run prettier -- --write --no-list-different",
+        "clean": "npm run clean:build && npm run clean:node_modules",
+        "clean:build": "rimraf build/",
+        "clean:node_modules": "rimraf node_modules/",
         "release": "npm run release:prepare && npm run release:publish",
         "release:prepare": "npm run clean && npm install && npm run build && npm run check",
         "release:publish": "np --no-2fa"
@@ -31,9 +35,13 @@
         "npm": ">=7.0.0"
     },
     "devDependencies": {
+        "@babel/cli": "^7.16.0",
+        "@babel/core": "^7.16.0",
+        "@babel/preset-env": "^7.16.4",
+        "@babel/preset-typescript": "^7.16.0",
+        "babel-plugin-add-import-extension": "^1.6.0",
         "np": "^7.3.0",
         "prettier": "^2.2.1",
-        "renamer": "^4.0.0",
         "rimraf": "^3.0.2",
         "typescript": "^4.1.5"
     }
