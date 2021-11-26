@@ -1,3 +1,2 @@
-import { Events } from './Events';
-export * from './types';
-export { Events };
+export { Events } from './Events';
+export type { Listener, RemoveListener } from './types';
