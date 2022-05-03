@@ -5,9 +5,10 @@ export default {
     },
     presets: [
         '@babel/typescript',
-        ['@babel/env', { useBuiltIns: false, modules: false }],
+        ['@babel/env', { useBuiltIns: false, modules: false, shippedProposals: true }],
     ],
     plugins: [
+        ['@babel/plugin-proposal-class-properties', { loose: true }],
         ['babel-plugin-add-import-extension', { extension: 'mjs' }],
     ],
 };
